@@ -1,0 +1,568 @@
+/* ==================================================
+   BARBERPRO - PÁGINA DE SERVIÇOS
+   ================================================== */
+
+.servicos-container {
+  display: block;
+
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+
+  padding: 90px 40px;
+
+  box-sizing: border-box;
+
+  background-color: #050505;
+  color: #ffffff;
+}
+
+/* ==================================================
+   TÍTULO
+   ================================================== */
+
+.servicos-container h2 {
+  margin: 0 auto 50px;
+
+  text-align: center;
+
+  font-size: 2.6rem;
+  font-weight: 700;
+
+  color: #ffffff;
+}
+
+.servicos-container h2::after {
+  content: "";
+
+  display: block;
+
+  width: 60px;
+  height: 3px;
+
+  margin: 15px auto 0;
+
+  background-color: #d4af37;
+
+  border-radius: 10px;
+}
+
+/* ==================================================
+   LISTA DE SERVIÇOS
+   ================================================== */
+
+.servicos-lista {
+  width: 100%;
+  max-width: 1100px;
+
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  gap: 25px;
+}
+
+/* ==================================================
+   CARD
+   ================================================== */
+
+.servico-card {
+  display: flex;
+  flex-direction: column;
+
+  padding: 28px;
+
+  box-sizing: border-box;
+
+  background: linear-gradient(
+    145deg,
+    #151515,
+    #090909
+  );
+
+  border: 1px solid rgba(212, 175, 55, 0.25);
+
+  border-radius: 14px;
+
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.45);
+
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.servico-card:hover {
+  transform: translateY(-5px);
+
+  border-color: #d4af37;
+
+  box-shadow:
+    0 15px 35px rgba(0, 0, 0, 0.6),
+    0 0 20px rgba(212, 175, 55, 0.08);
+}
+
+/* ==================================================
+   NOME DO SERVIÇO
+   ================================================== */
+
+.servico-card h3 {
+  margin: 0 0 10px;
+
+  font-size: 1.35rem;
+  font-weight: 700;
+
+  color: #ffffff;
+}
+
+/* ==================================================
+   PREÇO
+   ================================================== */
+
+.servico-card p:nth-of-type(1) {
+  margin: 0 0 5px;
+
+  font-size: 1.25rem;
+  font-weight: 700;
+
+  color: #d4af37;
+}
+
+/* ==================================================
+   DURAÇÃO
+   ================================================== */
+
+.servico-card p:nth-of-type(2) {
+  margin: 0;
+
+  font-size: 0.9rem;
+
+  color: #999999;
+}
+
+/* ==================================================
+   BOTÃO SELECIONAR
+   ================================================== */
+
+.servico-card button {
+  width: 100%;
+
+  margin-top: 22px;
+  padding: 13px 20px;
+
+  background-color: transparent;
+
+  border: 1px solid #d4af37;
+  border-radius: 7px;
+
+  color: #d4af37;
+
+  font-size: 0.95rem;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.servico-card button:hover {
+  background-color: #d4af37;
+
+  color: #050505;
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 7px 20px rgba(212, 175, 55, 0.25);
+}
+
+/* ==================================================
+   ÁREA DO SERVIÇO SELECIONADO
+   ================================================== */
+
+.servico-selecionado {
+  width: 100%;
+  max-width: 1100px;
+
+  margin: 50px auto 0;
+
+  padding: 35px;
+
+  box-sizing: border-box;
+
+  background: linear-gradient(
+    145deg,
+    #151515,
+    #090909
+  );
+
+  border: 1px solid rgba(212, 175, 55, 0.45);
+
+  border-radius: 16px;
+
+  box-shadow:
+    0 15px 40px rgba(0, 0, 0, 0.5);
+}
+
+/* ==================================================
+   TÍTULO DO SERVIÇO SELECIONADO
+   ================================================== */
+
+.servico-selecionado h3 {
+  margin: 0 0 20px;
+
+  font-size: 1.6rem;
+  font-weight: 700;
+
+  color: #d4af37;
+}
+
+.servico-selecionado p {
+  margin: 8px 0;
+
+  color: #cccccc;
+
+  font-size: 1rem;
+}
+
+/* ==================================================
+   CAMPO DE DATA
+   ================================================== */
+
+.campo-data-container {
+  position: relative;
+
+  width: 100%;
+  max-width: 280px;
+
+  margin-top: 25px;
+}
+
+.campo-data {
+  display: block;
+
+  width: 100%;
+
+  padding: 13px 45px 13px 15px;
+
+  box-sizing: border-box;
+
+  background-color: #050505;
+
+  border: 1px solid rgba(212, 175, 55, 0.45);
+
+  border-radius: 7px;
+
+  color: #ffffff;
+
+  font-family: inherit;
+  font-size: 0.95rem;
+
+  cursor: pointer;
+
+  color-scheme: dark;
+
+  transition:
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+/* ==================================================
+   ÍCONE NATIVO DO CALENDÁRIO
+   ================================================== */
+
+.campo-data::-webkit-calendar-picker-indicator {
+  opacity: 0;
+
+  cursor: pointer;
+}
+
+/* ==================================================
+   ÍCONE PERSONALIZADO
+   ================================================== */
+
+.icone-calendario {
+  position: absolute;
+
+  top: 50%;
+  right: 14px;
+
+  width: 20px;
+  height: 20px;
+
+  transform: translateY(-50%);
+
+  color: #d4af37;
+
+  pointer-events: none;
+
+  transition:
+    transform 0.2s ease,
+    color 0.2s ease;
+}
+
+.campo-data-container:hover .icone-calendario {
+  color: #ffffff;
+
+  transform: translateY(-50%) scale(1.08);
+}
+
+/* ==================================================
+   HOVER DO CAMPO
+   ================================================== */
+
+.campo-data:hover {
+  border-color: #d4af37;
+}
+
+/* ==================================================
+   FOCUS DO CAMPO
+   ================================================== */
+
+.campo-data:focus {
+  outline: none;
+
+  border-color: #d4af37;
+
+  box-shadow:
+    0 0 0 3px rgba(212, 175, 55, 0.12);
+}
+
+/* ==================================================
+   HORÁRIOS
+   ================================================== */
+
+.servico-selecionado h4 {
+  margin: 35px 0 18px;
+
+  font-size: 1.15rem;
+  font-weight: 600;
+
+  color: #ffffff;
+}
+
+/* ==================================================
+   BOTÕES DE HORÁRIO
+   ================================================== */
+
+.servico-selecionado button.normal,
+.servico-selecionado button.selecionado {
+  padding: 10px 17px;
+
+  margin: 5px;
+
+  border-radius: 6px;
+
+  font-size: 0.9rem;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    background-color 0.25s ease,
+    color 0.25s ease,
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+/* ==================================================
+   HORÁRIO NORMAL
+   ================================================== */
+
+.servico-selecionado button.normal {
+  background-color: #111111;
+
+  border: 1px solid rgba(212, 175, 55, 0.35);
+
+  color: #ffffff;
+}
+
+.servico-selecionado button.normal:hover {
+  background-color: #d4af37;
+
+  border-color: #d4af37;
+
+  color: #050505;
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 5px 15px rgba(212, 175, 55, 0.18);
+}
+
+/* ==================================================
+   HORÁRIO SELECIONADO
+   ================================================== */
+
+.servico-selecionado button.selecionado {
+  background-color: #d4af37;
+
+  border: 1px solid #d4af37;
+
+  color: #050505;
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 5px 18px rgba(212, 175, 55, 0.3);
+}
+
+/* ==================================================
+   HORÁRIO ESCOLHIDO
+   ================================================== */
+
+.servico-selecionado .horario-escolhido {
+  margin-top: 25px;
+
+  padding: 15px 18px;
+
+  background-color: #050505;
+
+  border-left: 3px solid #d4af37;
+
+  border-radius: 6px;
+
+  color: #ffffff;
+
+  font-weight: 600;
+}
+
+/* ==================================================
+   BOTÃO CONTINUAR
+   ================================================== */
+
+.btn-continuar {
+  display: block;
+
+  width: 100%;
+  max-width: 250px;
+
+  margin: 30px 0 0;
+
+  padding: 14px 22px;
+
+  background-color: #d4af37;
+
+  border: 1px solid #d4af37;
+
+  border-radius: 7px;
+
+  color: #050505;
+
+  font-size: 1rem;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition:
+    background-color 0.3s ease,
+    border-color 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.btn-continuar:hover {
+  background-color: #ffffff;
+
+  border-color: #ffffff;
+
+  color: #050505;
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 7px 20px rgba(255, 255, 255, 0.08);
+}
+
+/* ==================================================
+   TABLET
+   ================================================== */
+
+@media (max-width: 768px) {
+
+  .servicos-container {
+    padding: 65px 25px;
+  }
+
+  .servicos-container h2 {
+    font-size: 2.1rem;
+
+    margin-bottom: 40px;
+  }
+
+  .servicos-lista {
+    grid-template-columns: 1fr;
+  }
+
+  .servico-card {
+    padding: 25px;
+  }
+
+  .servico-selecionado {
+    padding: 28px;
+  }
+
+  .btn-continuar {
+    max-width: 100%;
+  }
+}
+
+/* ==================================================
+   CELULAR
+   ================================================== */
+
+@media (max-width: 480px) {
+
+  .servicos-container {
+    padding: 50px 15px;
+  }
+
+  .servicos-container h2 {
+    font-size: 1.75rem;
+  }
+
+  .servicos-lista {
+    gap: 18px;
+  }
+
+  .servico-card {
+    padding: 22px;
+  }
+
+  .servico-card h3 {
+    font-size: 1.2rem;
+  }
+
+  .servico-selecionado {
+    padding: 22px 18px;
+  }
+
+  .servico-selecionado h3 {
+    font-size: 1.35rem;
+  }
+
+  .campo-data-container {
+    max-width: 100%;
+  }
+
+  .servico-selecionado button.normal,
+  .servico-selecionado button.selecionado {
+    min-width: 70px;
+
+    margin: 4px 2px;
+  }
+
+  .btn-continuar {
+    max-width: 100%;
+
+    margin-top: 25px;
+  }
+}

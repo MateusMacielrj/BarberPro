@@ -1,0 +1,686 @@
+/* ==================================================
+   BARBERPRO — CONFIRMAÇÃO
+   ================================================== */
+
+.confirmacao-container {
+  width: 100%;
+  max-width: 750px;
+
+  min-height: calc(100vh - 80px);
+
+  margin: 0 auto;
+  padding: 70px 25px;
+
+  box-sizing: border-box;
+
+  background-color: #050505;
+  color: #ffffff;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+/* ==================================================
+   TÍTULO
+   ================================================== */
+
+.confirmacao-container > h2 {
+  margin: 0 0 40px;
+
+  font-size: 2.5rem;
+  font-weight: 700;
+
+  color: #ffffff;
+
+  text-align: center;
+}
+
+.confirmacao-container > h2::after {
+  content: "";
+
+  display: block;
+
+  width: 60px;
+  height: 3px;
+
+  margin: 15px auto 0;
+
+  background-color: #d4af37;
+
+  border-radius: 10px;
+}
+
+
+/* ==================================================
+   CARDS
+   ================================================== */
+
+.confirmacao-servicos,
+.confirmacao-resumo {
+  width: 100%;
+
+  padding: 30px;
+
+  margin-bottom: 20px;
+
+  box-sizing: border-box;
+
+  background: linear-gradient(
+    145deg,
+    #161616,
+    #090909
+  );
+
+  border: 1px solid rgba(212, 175, 55, 0.3);
+
+  border-radius: 16px;
+
+  box-shadow:
+    0 15px 40px rgba(0, 0, 0, 0.45);
+}
+
+
+/* ==================================================
+   TÍTULOS DOS CARDS
+   ================================================== */
+
+.confirmacao-servicos h3,
+.confirmacao-resumo h3 {
+  margin: 0 0 25px;
+
+  color: #d4af37;
+
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+
+/* ==================================================
+   SERVIÇO
+   ================================================== */
+
+.confirmacao-servico {
+  width: 100%;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 20px;
+
+  padding: 18px 0;
+
+  border-bottom: 1px solid rgba(
+    255,
+    255,
+    255,
+    0.08
+  );
+}
+
+.confirmacao-servico:first-of-type {
+  padding-top: 0;
+}
+
+.confirmacao-servico:last-child {
+  padding-bottom: 0;
+
+  border-bottom: none;
+}
+
+
+/* ==================================================
+   NOME
+   ================================================== */
+
+.confirmacao-servico h4 {
+  margin: 0 0 6px;
+
+  color: #ffffff;
+
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+
+
+/* ==================================================
+   DURAÇÃO
+   ================================================== */
+
+.confirmacao-servico p {
+  margin: 0;
+
+  color: #999999;
+
+  font-size: 0.9rem;
+}
+
+
+/* ==================================================
+   PREÇO
+   ================================================== */
+
+.confirmacao-servico strong {
+  color: #d4af37;
+
+  font-size: 1.05rem;
+
+  white-space: nowrap;
+}
+
+
+/* ==================================================
+   RESUMO
+   ================================================== */
+
+.confirmacao-resumo p {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  margin: 0;
+
+  padding: 15px 0;
+
+  color: #cccccc;
+
+  font-size: 1rem;
+
+  border-bottom: 1px solid rgba(
+    255,
+    255,
+    255,
+    0.07
+  );
+}
+
+.confirmacao-resumo p:last-child {
+  border-bottom: none;
+}
+
+.confirmacao-resumo strong {
+  color: #d4af37;
+
+  font-weight: 700;
+}
+
+
+/* ==================================================
+   BOTÕES
+   ================================================== */
+
+.confirmacao-botoes {
+  width: 100%;
+
+  display: flex;
+
+  gap: 15px;
+
+  margin-top: 10px;
+}
+
+
+/* ==================================================
+   BOTÃO VOLTAR
+   ================================================== */
+
+.btn-voltar {
+  flex: 1;
+
+  padding: 15px 20px;
+
+  background-color: transparent;
+
+  border: 1px solid rgba(
+    212,
+    175,
+    55,
+    0.6
+  );
+
+  border-radius: 8px;
+
+  color: #d4af37;
+
+  font-size: 1rem;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: 0.3s ease;
+}
+
+.btn-voltar:hover {
+  background-color: #d4af37;
+
+  color: #050505;
+
+  transform: translateY(-2px);
+}
+
+
+/* ==================================================
+   BOTÃO CONFIRMAR
+   ================================================== */
+
+.btn-confirmar {
+  flex: 2;
+
+  padding: 15px 20px;
+
+  background-color: #d4af37;
+
+  border: 1px solid #d4af37;
+
+  border-radius: 8px;
+
+  color: #050505;
+
+  font-size: 1rem;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: 0.3s ease;
+}
+
+.btn-confirmar:hover {
+  background-color: #ffffff;
+
+  border-color: #ffffff;
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 8px 25px rgba(
+      255,
+      255,
+      255,
+      0.08
+    );
+}
+
+
+/* ==================================================
+   BOTÃO CONFIRMAR — DESABILITADO
+   ================================================== */
+
+.btn-confirmar:disabled {
+  background-color: #333333;
+
+  border-color: #333333;
+
+  color: #777777;
+
+  cursor: not-allowed;
+
+  transform: none;
+
+  box-shadow: none;
+}
+
+
+/* ==================================================
+   TELA DE SUCESSO
+   ================================================== */
+
+.confirmacao-sucesso {
+  width: 100%;
+  max-width: 600px;
+
+  padding: 45px 35px;
+
+  box-sizing: border-box;
+
+  text-align: center;
+
+  background: linear-gradient(
+    145deg,
+    #161616,
+    #090909
+  );
+
+  border: 1px solid rgba(
+    212,
+    175,
+    55,
+    0.35
+  );
+
+  border-radius: 20px;
+
+  box-shadow:
+    0 20px 50px rgba(
+      0,
+      0,
+      0,
+      0.5
+    );
+}
+
+
+/* ==================================================
+   ÍCONE DE SUCESSO
+   ================================================== */
+
+.icone-sucesso {
+  width: 75px;
+  height: 75px;
+
+  margin: 0 auto 25px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background-color: #d4af37;
+
+  color: #050505;
+
+  font-size: 2.5rem;
+
+  box-shadow:
+    0 0 0 8px rgba(
+      212,
+      175,
+      55,
+      0.08
+    );
+}
+
+.icone-sucesso svg {
+  width: 40px;
+  height: 40px;
+}
+
+
+/* ==================================================
+   TÍTULO DE SUCESSO
+   ================================================== */
+
+.confirmacao-sucesso h2 {
+  margin: 0 0 12px;
+
+  color: #ffffff;
+
+  font-size: 2.2rem;
+}
+
+
+/* ==================================================
+   MENSAGEM
+   ================================================== */
+
+.mensagem-sucesso {
+  margin: 0 0 35px;
+
+  color: #999999;
+
+  font-size: 1rem;
+}
+
+
+/* ==================================================
+   RESUMO FINAL
+   ================================================== */
+
+.resumo-final {
+  width: 100%;
+
+  padding: 25px;
+
+  box-sizing: border-box;
+
+  margin-bottom: 30px;
+
+  background-color: #0b0b0b;
+
+  border: 1px solid rgba(
+    255,
+    255,
+    255,
+    0.08
+  );
+
+  border-radius: 12px;
+
+  text-align: left;
+}
+
+.resumo-final h3 {
+  margin: 0 0 20px;
+
+  color: #d4af37;
+
+  font-size: 1.15rem;
+
+  text-align: center;
+}
+
+
+/* ==================================================
+   ITEM DO RESUMO FINAL
+   ================================================== */
+
+.resumo-item {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 13px 0;
+
+  border-bottom: 1px solid rgba(
+    255,
+    255,
+    255,
+    0.07
+  );
+}
+
+.resumo-item:last-child {
+  border-bottom: none;
+}
+
+.resumo-item span {
+  color: #999999;
+
+  font-size: 0.95rem;
+}
+
+.resumo-item strong {
+  color: #ffffff;
+
+  font-size: 0.95rem;
+}
+
+
+/* ==================================================
+   BOTÃO NOVO AGENDAMENTO
+   ================================================== */
+
+.btn-novo-agendamento {
+  width: 100%;
+
+  padding: 15px 20px;
+
+  background-color: #d4af37;
+
+  border: 1px solid #d4af37;
+
+  border-radius: 8px;
+
+  color: #050505;
+
+  font-size: 1rem;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: 0.3s ease;
+}
+
+.btn-novo-agendamento:hover {
+  background-color: #ffffff;
+
+  border-color: #ffffff;
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 8px 25px rgba(
+      255,
+      255,
+      255,
+      0.08
+    );
+}
+
+
+/* ==================================================
+   TABLET
+   ================================================== */
+
+@media (max-width: 768px) {
+  .confirmacao-container {
+    max-width: 650px;
+
+    padding: 60px 25px;
+  }
+
+  .confirmacao-container > h2 {
+    font-size: 2.2rem;
+
+    margin-bottom: 35px;
+  }
+
+  .confirmacao-servicos,
+  .confirmacao-resumo {
+    padding: 25px;
+  }
+
+  .confirmacao-sucesso {
+    padding: 40px 30px;
+  }
+
+  .confirmacao-sucesso h2 {
+    font-size: 2rem;
+  }
+}
+
+
+/* ==================================================
+   CELULAR
+   ================================================== */
+
+@media (max-width: 480px) {
+  .confirmacao-container {
+    min-height: calc(100vh - 70px);
+
+    padding: 45px 18px;
+  }
+
+  .confirmacao-container > h2 {
+    font-size: 1.8rem;
+
+    margin-bottom: 30px;
+  }
+
+  .confirmacao-servicos,
+  .confirmacao-resumo {
+    padding: 20px;
+
+    border-radius: 12px;
+  }
+
+  .confirmacao-servicos h3,
+  .confirmacao-resumo h3 {
+    font-size: 1.1rem;
+
+    margin-bottom: 20px;
+  }
+
+  .confirmacao-servico {
+    align-items: flex-start;
+
+    gap: 10px;
+  }
+
+  .confirmacao-servico h4 {
+    font-size: 0.95rem;
+  }
+
+  .confirmacao-servico p {
+    font-size: 0.85rem;
+  }
+
+  .confirmacao-servico strong {
+    font-size: 0.95rem;
+  }
+
+  .confirmacao-resumo p {
+    font-size: 0.9rem;
+
+    gap: 15px;
+  }
+
+  .confirmacao-botoes {
+    flex-direction: column;
+
+    gap: 10px;
+  }
+
+  .btn-voltar,
+  .btn-confirmar {
+    width: 100%;
+
+    flex: none;
+  }
+
+  .confirmacao-sucesso {
+    padding: 35px 20px;
+
+    border-radius: 16px;
+  }
+
+  .icone-sucesso {
+    width: 65px;
+    height: 65px;
+
+    font-size: 2rem;
+  }
+
+  .icone-sucesso svg {
+    width: 34px;
+    height: 34px;
+  }
+
+  .confirmacao-sucesso h2 {
+    font-size: 1.7rem;
+  }
+
+  .mensagem-sucesso {
+    font-size: 0.9rem;
+  }
+
+  .resumo-final {
+    padding: 20px;
+  }
+
+  .resumo-item {
+    gap: 15px;
+  }
+
+  .resumo-item span,
+  .resumo-item strong {
+    font-size: 0.9rem;
+  }
+}

@@ -1,0 +1,157 @@
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  gap: 40px;
+}
+
+/* IMAGEM */
+
+.hero-image img {
+  width: 800px;
+  max-width: 100%;
+}
+
+/* TEXTO */
+
+.hero-content h1 {
+  font-size: 5rem;
+  color: white;
+}
+
+.hero-content p {
+  font-size: 2rem;
+  color: white;
+}
+
+/* BOTÕES */
+
+.hero-buttons {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.hero-buttons button {
+  background-color: #d4af37;
+  color: #080808;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 0.3rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.hero-buttons a {
+  color: white;
+  text-decoration: none;
+  background-color: transparent;
+  padding: 0.8rem 1.5rem;
+  border: 1px solid #d4af37;
+  border-radius: 0.3rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 1200px) {
+
+  section {
+    gap: 20px;
+    padding: 0 3rem;
+  }
+
+  .hero-image img {
+    width: 600px;
+  }
+
+  .hero-content h1 {
+    font-size: 4rem;
+  }
+
+  .hero-content p {
+    font-size: 1.5rem;
+  }
+}
+
+
+/* =========================
+   TABLET MENOR
+========================= */
+
+@media (max-width: 900px) {
+
+  section {
+    gap: 10px;
+    padding: 0 2rem;
+  }
+
+  .hero-image img {
+    width: 450px;
+  }
+
+  .hero-content h1 {
+    font-size: 3rem;
+  }
+
+  .hero-content p {
+    font-size: 1.2rem;
+  }
+
+  .hero-buttons {
+    gap: 1rem;
+  }
+
+  .hero-buttons button,
+  .hero-buttons a {
+    padding: 0.7rem 1.2rem;
+    font-size: 0.9rem;
+  }
+}
+
+
+/* =========================
+   CELULAR
+========================= */
+
+@media (max-width: 600px) {
+
+  section {
+    flex-direction: column;
+    height: auto;
+    min-height: 80vh;
+    padding: 4rem 1.5rem;
+    gap: 2rem;
+    text-align: center;
+  }
+
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .hero-buttons button,
+  .hero-buttons a {
+    font-size: 0.9rem;
+    padding: 0.7rem 1.2rem;
+  }
+
+  .hero-image img {
+    width: 100%;
+    max-width: 400px;
+  }
+}
