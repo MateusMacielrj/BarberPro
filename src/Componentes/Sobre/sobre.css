@@ -1,0 +1,130 @@
+/* ==================================================
+   BARBERPRO — SOBRE
+   ================================================== */
+
+.sobre {
+  width: 100%;
+  padding: 100px 20px;
+  background-color: #050505;
+  color: #fff;
+}
+
+.sobre-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.sobre-content {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.sobre-subtitulo {
+  display: inline-block;
+  margin-bottom: 15px;
+
+  color: #d4af37;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+}
+
+.sobre-content h2 {
+  margin-bottom: 25px;
+
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.sobre-content h2 span {
+  color: #d4af37;
+}
+
+.sobre-content > p {
+  max-width: 800px;
+  margin: 0 auto 18px;
+
+  color: #bdbdbd;
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+.sobre-diferenciais {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+
+  margin-top: 55px;
+}
+
+.sobre-item {
+  padding: 30px 25px;
+
+  background-color: #0d0d0d;
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  border-radius: 12px;
+
+  text-align: left;
+
+  transition: 0.3s ease;
+}
+
+.sobre-item:hover {
+  transform: translateY(-5px);
+  border-color: rgba(212, 175, 55, 0.6);
+}
+
+.sobre-item > svg {
+  margin-bottom: 18px;
+
+  color: #d4af37;
+  font-size: 32px;
+}
+
+.sobre-item h3 {
+  margin-bottom: 10px;
+
+  color: #fff;
+  font-size: 1.1rem;
+}
+
+.sobre-item p {
+  color: #999;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* ==================================================
+   RESPONSIVIDADE
+   ================================================== */
+
+@media (max-width: 900px) {
+  .sobre-diferenciais {
+    grid-template-columns: 1fr;
+  }
+
+  .sobre-content h2 {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .sobre {
+    padding: 70px 20px;
+  }
+
+  .sobre-content h2 {
+    font-size: 2rem;
+  }
+
+  .sobre-content > p {
+    font-size: 0.95rem;
+  }
+
+  .sobre-item {
+    padding: 25px 20px;
+  }
+}

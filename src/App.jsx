@@ -3,6 +3,8 @@ import { Routes, Route } from "react-router-dom";
 
 import Header from "./Componentes/Header/header";
 import Section from "./Componentes/Section/section";
+import Sobre from "./Componentes/Sobre/sobre";
+import Contato from "./Componentes/Contato/contato";
 import Footer from "./Componentes/Footer/footer";
 import Serviços from "./Componentes/Serviços/serviços";
 import Confirmacao from "./Componentes/Confirmação/confirm";
@@ -10,6 +12,8 @@ import Confirmacao from "./Componentes/Confirmação/confirm";
 import "./App.css";
 import "./Componentes/Header/header.css";
 import "./Componentes/Section/section.css";
+import "./Componentes/Sobre/sobre.css";
+import "./Componentes/Contato/contato.css";
 import "./Componentes/Footer/footer.css";
 import "./Componentes/Serviços/serviços.css";
 import "./Componentes/Confirmação/confirm.css";
@@ -24,19 +28,29 @@ function App() {
   return (
     <Routes>
 
-      {/* HOME */}
+      {/* =========================
+          HOME
+      ========================= */}
       <Route
         path="/"
         element={
           <div className="App">
             <Header />
+
             <Section />
+
+            <Sobre />
+
+            <Contato />
+
             <Footer />
           </div>
         }
       />
 
-      {/* SERVIÇOS */}
+      {/* =========================
+          SERVIÇOS
+      ========================= */}
       <Route
         path="/servicos"
         element={
@@ -55,7 +69,9 @@ function App() {
         }
       />
 
-      {/* CONFIRMAÇÃO */}
+      {/* =========================
+          CONFIRMAÇÃO
+      ========================= */}
       <Route
         path="/confirmacao"
         element={

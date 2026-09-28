@@ -1,0 +1,252 @@
+/* ==================================================
+   BARBERPRO — CONTATO
+   ================================================== */
+
+.contato {
+  width: 100%;
+  padding: 100px 20px;
+  background-color: #080808;
+  color: #fff;
+}
+
+.contato-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ==================================================
+   HEADER
+   ================================================== */
+
+.contato-header {
+  max-width: 750px;
+  margin: 0 auto 60px;
+  text-align: center;
+}
+
+.contato-header > span {
+  display: inline-block;
+  margin-bottom: 15px;
+
+  color: #d4af37;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+}
+
+.contato-header h2 {
+  margin-bottom: 20px;
+
+  font-size: 3rem;
+  line-height: 1.2;
+}
+
+.contato-header h2 strong {
+  color: #d4af37;
+}
+
+.contato-header p {
+  color: #aaa;
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+/* ==================================================
+   CONTENT
+   ================================================== */
+
+.contato-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  align-items: stretch;
+}
+
+/* ==================================================
+   INFORMAÇÕES
+   ================================================== */
+
+.contato-informacoes {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contato-item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+
+  padding: 25px;
+
+  background-color: #0d0d0d;
+  border: 1px solid rgba(212, 175, 55, 0.15);
+  border-radius: 12px;
+
+  transition: 0.3s ease;
+}
+
+.contato-item:hover {
+  transform: translateY(-3px);
+  border-color: rgba(212, 175, 55, 0.5);
+}
+
+.contato-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  min-width: 50px;
+  height: 50px;
+
+  border-radius: 50%;
+
+  background-color: rgba(212, 175, 55, 0.1);
+  color: #d4af37;
+
+  font-size: 24px;
+}
+
+.contato-item h3 {
+  margin-bottom: 6px;
+
+  color: #fff;
+  font-size: 1rem;
+}
+
+.contato-item p {
+  margin: 2px 0;
+
+  color: #999;
+  font-size: 0.9rem;
+}
+
+/* ==================================================
+   AÇÕES
+   ================================================== */
+
+.contato-acoes {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  padding: 50px;
+
+  background: linear-gradient(
+    145deg,
+    #111,
+    #080808
+  );
+
+  border: 1px solid rgba(212, 175, 55, 0.25);
+  border-radius: 15px;
+}
+
+.contato-acoes h3 {
+  margin-bottom: 15px;
+
+  color: #fff;
+  font-size: 2rem;
+}
+
+.contato-acoes > p {
+  margin-bottom: 35px;
+
+  color: #aaa;
+  line-height: 1.7;
+}
+
+/* ==================================================
+   BOTÕES
+   ================================================== */
+
+.contato-botoes {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contato-botoes a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  width: 100%;
+  padding: 15px 20px;
+
+  border-radius: 8px;
+
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+
+  transition: 0.3s ease;
+}
+
+.contato-botoes svg {
+  font-size: 21px;
+}
+
+.contato-whatsapp {
+  background-color: #d4af37;
+  color: #050505;
+}
+
+.contato-whatsapp:hover {
+  background-color: #e2c158;
+  transform: translateY(-2px);
+}
+
+.contato-instagram {
+  background-color: transparent;
+  color: #fff;
+
+  border: 1px solid rgba(212, 175, 55, 0.5);
+}
+
+.contato-instagram:hover {
+  background-color: rgba(212, 175, 55, 0.08);
+  border-color: #d4af37;
+}
+
+/* ==================================================
+   RESPONSIVIDADE
+   ================================================== */
+
+@media (max-width: 900px) {
+  .contato-content {
+    grid-template-columns: 1fr;
+  }
+
+  .contato-header h2 {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .contato {
+    padding: 70px 20px;
+  }
+
+  .contato-header h2 {
+    font-size: 2rem;
+  }
+
+  .contato-header p {
+    font-size: 0.95rem;
+  }
+
+  .contato-acoes {
+    padding: 30px 20px;
+  }
+
+  .contato-acoes h3 {
+    font-size: 1.6rem;
+  }
+
+  .contato-item {
+    padding: 20px;
+  }
+}
