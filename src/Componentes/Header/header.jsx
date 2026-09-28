@@ -22,11 +22,11 @@ function Header() {
           </li>
 
           <li>
-            <a href="#sobre">Sobre</a>
+            <Link to="/sobre">Sobre</Link>
           </li>
 
           <li>
-            <a href="#contato">Contato</a>
+            <Link to="/contato">Contato</Link>
           </li>
         </ul>
 

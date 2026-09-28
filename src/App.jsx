@@ -36,13 +36,35 @@ function App() {
         element={
           <div className="App">
             <Header />
-
             <Section />
+            <Footer />
+          </div>
+        }
+      />
 
+      {/* =========================
+          SOBRE
+      ========================= */}
+      <Route
+        path="/sobre"
+        element={
+          <div className="App">
+            <Header />
             <Sobre />
+            <Footer />
+          </div>
+        }
+      />
 
+      {/* =========================
+          CONTATO
+      ========================= */}
+      <Route
+        path="/contato"
+        element={
+          <div className="App">
+            <Header />
             <Contato />
-
             <Footer />
           </div>
         }
